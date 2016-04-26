@@ -22,7 +22,6 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:id="@+id/button1"
-                android:enabled="false"
                 android:foreground="@drawable/ian1"
                 android:layout_margin="2dp" />
 
