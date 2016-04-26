@@ -4,14 +4,16 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    //stores all of the sound bites
     private SoundPool sp;
 
+    //id store for each sound bite
     private int sound1Id;
     private int sound2Id;
     private int sound3Id;
@@ -39,63 +41,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sp= new SoundPool(24,AudioManager.STREAM_MUSIC,0);
+        //initialize
+        sp = new SoundPool(24, AudioManager.STREAM_MUSIC, 0);
 
         //get pointers to buttons
-        Button button1= (Button) findViewById(R.id.button1);
-        Button button2= (Button) findViewById(R.id.button2);
-        Button button3= (Button) findViewById(R.id.button3);
-        Button button4= (Button) findViewById(R.id.button4);
-        Button button5= (Button) findViewById(R.id.button5);
-        Button button6= (Button) findViewById(R.id.button6);
-        Button button7= (Button) findViewById(R.id.button7);
-        Button button8= (Button) findViewById(R.id.button8);
-        Button button9= (Button) findViewById(R.id.button9);
-        Button button10= (Button) findViewById(R.id.button10);
-        Button button11= (Button) findViewById(R.id.button11);
-        Button button12= (Button) findViewById(R.id.button12);
-        Button button13= (Button) findViewById(R.id.button13);
-        Button button14= (Button) findViewById(R.id.button14);
-        Button button15= (Button) findViewById(R.id.button15);
-        Button button16= (Button) findViewById(R.id.button16);
-        Button button17= (Button) findViewById(R.id.button17);
-        Button button18= (Button) findViewById(R.id.button18);
-        Button button19= (Button) findViewById(R.id.button19);
-        Button button20= (Button) findViewById(R.id.button20);
-        Button button21= (Button) findViewById(R.id.button21);
-        Button button22= (Button) findViewById(R.id.button22);
-        Button button23= (Button) findViewById(R.id.button23);
-        Button button24= (Button) findViewById(R.id.button24);
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
+        Button button4 = (Button) findViewById(R.id.button4);
+        Button button5 = (Button) findViewById(R.id.button5);
+        Button button6 = (Button) findViewById(R.id.button6);
+        Button button7 = (Button) findViewById(R.id.button7);
+        Button button8 = (Button) findViewById(R.id.button8);
+        Button button9 = (Button) findViewById(R.id.button9);
+        Button button10 = (Button) findViewById(R.id.button10);
+        Button button11 = (Button) findViewById(R.id.button11);
+        Button button12 = (Button) findViewById(R.id.button12);
+        Button button13 = (Button) findViewById(R.id.button13);
+        Button button14 = (Button) findViewById(R.id.button14);
+        Button button15 = (Button) findViewById(R.id.button15);
+        Button button16 = (Button) findViewById(R.id.button16);
+        Button button17 = (Button) findViewById(R.id.button17);
+        Button button18 = (Button) findViewById(R.id.button18);
+        Button button19 = (Button) findViewById(R.id.button19);
+        Button button20 = (Button) findViewById(R.id.button20);
+        Button button21 = (Button) findViewById(R.id.button21);
+        Button button22 = (Button) findViewById(R.id.button22);
+        Button button23 = (Button) findViewById(R.id.button23);
+        Button button24 = (Button) findViewById(R.id.button24);
 
         //load sound clips
-        sound1Id= sp.load(this, R.raw.sound1, 1);
-        sound2Id= sp.load(this, R.raw.sound2, 1);
-        sound3Id= sp.load(this, R.raw.sound3, 1);
-        sound4Id= sp.load(this, R.raw.sound4, 1);
-        sound5Id= sp.load(this, R.raw.sound5, 1);
-        sound6Id= sp.load(this, R.raw.sound6, 1);
-        sound7Id= sp.load(this, R.raw.sound7, 1);
-        sound8Id= sp.load(this, R.raw.sound8, 1);
-        sound9Id= sp.load(this, R.raw.sound9, 1);
-        sound10Id= sp.load(this, R.raw.sound10, 1);
-        sound11Id= sp.load(this, R.raw.sound11, 1);
-        sound12Id= sp.load(this, R.raw.sound12, 1);
-        sound13Id= sp.load(this, R.raw.sound13, 1);
-        sound14Id= sp.load(this, R.raw.sound14, 1);
-        sound15Id= sp.load(this, R.raw.sound15, 1);
-        sound16Id= sp.load(this, R.raw.sound16, 1);
-        sound17Id= sp.load(this, R.raw.sound17, 1);
-        sound18Id= sp.load(this, R.raw.sound18, 1);
-        sound19Id= sp.load(this, R.raw.sound19, 1);
-        sound20Id= sp.load(this, R.raw.sound20, 1);
-        sound21Id= sp.load(this, R.raw.sound21, 1);
-        sound22Id= sp.load(this, R.raw.sound22, 1);
-        sound23Id= sp.load(this, R.raw.sound23, 1);
-        sound24Id= sp.load(this, R.raw.sound24, 1);
+        sound1Id = sp.load(this, R.raw.sound1, 1);
+        sound2Id = sp.load(this, R.raw.sound2, 1);
+        sound3Id = sp.load(this, R.raw.sound3, 1);
+        sound4Id = sp.load(this, R.raw.sound4, 1);
+        sound5Id = sp.load(this, R.raw.sound5, 1);
+        sound6Id = sp.load(this, R.raw.sound6, 1);
+        sound7Id = sp.load(this, R.raw.sound7, 1);
+        sound8Id = sp.load(this, R.raw.sound8, 1);
+        sound9Id = sp.load(this, R.raw.sound9, 1);
+        sound10Id = sp.load(this, R.raw.sound10, 1);
+        sound11Id = sp.load(this, R.raw.sound11, 1);
+        sound12Id = sp.load(this, R.raw.sound12, 1);
+        sound13Id = sp.load(this, R.raw.sound13, 1);
+        sound14Id = sp.load(this, R.raw.sound14, 1);
+        sound15Id = sp.load(this, R.raw.sound15, 1);
+        sound16Id = sp.load(this, R.raw.sound16, 1);
+        sound17Id = sp.load(this, R.raw.sound17, 1);
+        sound18Id = sp.load(this, R.raw.sound18, 1);
+        sound19Id = sp.load(this, R.raw.sound19, 1);
+        sound20Id = sp.load(this, R.raw.sound20, 1);
+        sound21Id = sp.load(this, R.raw.sound21, 1);
+        sound22Id = sp.load(this, R.raw.sound22, 1);
+        sound23Id = sp.load(this, R.raw.sound23, 1);
+        sound24Id = sp.load(this, R.raw.sound24, 1);
 
+        //set listeners to trigger play function
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -125,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+        //choose which sound to play based on id of button clicked
         switch (v.getId()) {
             case R.id.button1: sp.play(sound1Id, 1, 1, 0, 0, 1); break;
             case R.id.button2: sp.play(sound2Id, 1, 1, 0, 0, 1); break;
@@ -152,5 +158,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button24: sp.play(sound24Id, 1, 1, 0, 0, 1); break;
         }
     }
-
 }
