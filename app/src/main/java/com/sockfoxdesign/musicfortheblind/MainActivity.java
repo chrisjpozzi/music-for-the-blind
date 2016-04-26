@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sp= new SoundPool.Builder(24);
+        sp= new SoundPool(24,AudioManager.STREAM_MUSIC,0);
 
         //get pointers to buttons
         Button button1= (Button) findViewById(R.id.button1);
