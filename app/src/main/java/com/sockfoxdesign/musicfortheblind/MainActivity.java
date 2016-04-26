@@ -12,8 +12,6 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final int MAX_NUMBER_STREAMS = 5;
-    private static final int SOURCE_QUALITY = 0;
 
     private SoundPool sp;
 
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sp= new SoundPool(MAX_NUMBER_STREAMS,AudioManager.STREAM_MUSIC,SOURCE_QUALITY);
+        sp= new SoundPool.Builder(24);
 
         //get pointers to buttons
         Button button1= (Button) findViewById(R.id.button1);
