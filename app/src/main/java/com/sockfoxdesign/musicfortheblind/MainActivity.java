@@ -1,5 +1,6 @@
 package com.sockfoxdesign.musicfortheblind;
 
+import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //initialize
         sp = new SoundPool(24, AudioManager.STREAM_MUSIC, 0);

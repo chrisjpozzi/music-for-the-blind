@@ -6,4 +6,6 @@
     <color name="black">#c8290339</color>
     <color name="background_material_light">#31094f</color>
     <color name="colorBackground">#350650</color>
+    <color name="primary_text_default_material_light">#16000000</color>
+    <color name="primary_text_material_light">#ffffff</color>
 </resources>
