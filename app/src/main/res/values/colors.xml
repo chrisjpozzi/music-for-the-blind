@@ -7,5 +7,11 @@
     <color name="background_material_light">#31094f</color>
     <color name="colorBackground">#350650</color>
     <color name="primary_text_default_material_light">#16000000</color>
-    <color name="primary_text_material_light">#ffffff</color>
+    <color name="primary_text_material_light">#ff6400</color>
+    <color name="primary_text_material_dark">#ff6400</color>
+    <color name="secondary_text_material_dark">#ff6400</color>
+    <color name="secondary_text_material_light">#ff6400</color>
+    <color name="foreground_material_light">#ff6400</color>
+    <color name="toolbar_text_color">#ff6400</color>
+    <color name="foreground_material_dark">#ff6400</color>
 </resources>

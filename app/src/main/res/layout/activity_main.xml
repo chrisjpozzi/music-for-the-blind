@@ -12,7 +12,8 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:id="@+id/tableLayout">
 
         <TableRow
             android:layout_width="fill_parent"
@@ -238,5 +239,30 @@
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="BUTTON-MASHING IS FUN!"
+        android:id="@+id/textView"
+        android:layout_above="@+id/tableLayout"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFF6400"
+        android:layout_marginBottom="18dp"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music for the Blind © CJ Pozzi"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textColor="#363636"
+        android:textStyle="bold" />
 
 </RelativeLayout>
